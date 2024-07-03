@@ -3,10 +3,10 @@ function shortenURL(url, numChars = 6) {
     if (!urlParts) return url;
 
     const protocolAndDomain = urlParts[1];
-    const baseUrl = urlParts[2];
+    const rest = urlParts[2];
 
-    const urlShortener = baseUrl.substring(0, numChars);
-    return protocolAndDomain + urlShortener + (rest.length > numChars ? '' : '');
+    const truncatedRest = rest.substring(0, numChars);
+    return protocolAndDomain + truncatedRest + (rest.length > numChars ? '' : '');
 }
 
 function saveToLocalStorage(urls) {
@@ -66,6 +66,7 @@ document.addEventListener("DOMContentLoaded", function() {
         saveToLocalStorage(urls);
         renderUrls(urls);
 
+        // Clear the input field after shortening
         originalLinkInput.value = "";
     });
 });
