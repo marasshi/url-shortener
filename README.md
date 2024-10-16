@@ -1,2 +1,8 @@
-# URL-Shortener
-I created a URL shortener is a service that converts a long URL into a significantly shorter version that redirects to the original address when clicked. This shorter URL is easier to share, especially on platforms with character limits.
+# URL Shortener
+
+URL Shortener is a web application that allows users to create shortened versions of long URLs. This tool is designed to make sharing links easier and more convenient, especially on platforms with character limitations.
+This is a basic project that works with local storage.
+
+# Tools 
+
+HTML, CSS, JavaScript.
